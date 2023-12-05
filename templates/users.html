@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block rgz %}Расчетно-графическая работа{% endblock %}
+
+{% block main %}
+<a href="/rgz/glavn">Вернуться к лабораторной работе</a><br>
+
+    <h1>User Names:</h1>
+    <ul>
+        {% for name in names %}
+            <li>{{ name }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

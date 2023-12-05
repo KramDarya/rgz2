@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block rgz %}Расчетно-графическая работа{% endblock %}
+
+{% block main %}
+
+<style>
+    main {
+        text-align: center;
+    }
+    .nazad {
+        margin-left: -1200px;
+        margin-top: 10px;
+    }
+
+    .avt {
+        color: #b6b6b6;
+        font-family: monospace;
+        letter-spacing: 3px;
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+    .log {
+        color: #8c8c8c;
+        font-family: monospace;
+        font-size: 15px;
+    }
+
+    .logg {
+        color: #8c8c8c;
+        font-family: monospace;
+        font-size: 15px;
+    }
+
+    .user {
+        margin-bottom: 20px;
+        margin-top: 10px;
+        text-align: center;
+        margin-left: 50px;
+    }
+
+    .userr {
+        margin-bottom: 20px;
+        text-align: center;
+        margin-left: 50px;
+    }
+
+    .error {
+        color: #848484;
+        font-family: monospace;
+        font-size: 15px;
+    }
+
+    .kn {
+    color: #818180;
+    font-family: monospace;
+    font-size: 15px;
+    color: #818180;
+    margin-left: 0px;
+}
+</style>
+
+<div class="nazad">
+    <form action="/rgz/glavn"><button class="b1">Назад</button></form>
+</div>
+
+<form method="POST">
+    <h1 class="avt" >Авторизуйтесь</h1>
+    <div class="error">{{ errors }}</div>
+    <div>
+        <input class="user" type="text" name="username" placeholder="username">
+        <label class="log" for="username">Имя</label>
+    </div>
+
+    <div>
+        <input class="user" type="text" name="login" placeholder="login">
+        <label class="log" for="login">Логин</label>
+    </div>
+   
+    <div>
+        <input class="userr" type="text" name="password" placeholder="password">
+        <label class="logg" for="password">Пароль</label>
+    </div>
+    <button class="kn" type="submit">Войти</button>
+</form>
+{% endblock %}
